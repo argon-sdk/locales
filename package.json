@@ -1,0 +1,63 @@
+{
+  "name": "@argon-sdk/locales",
+  "version": "1.0.0",
+  "description": "Localization plugin for Argon SDK",
+  "type": "module",
+  "license": "MIT",
+  "author": "omnifaced",
+  "keywords": [
+    "argon",
+    "bot",
+    "sdk",
+    "plugin",
+    "typescript",
+    "locales",
+    "localization",
+    "i18n",
+    "fluent",
+    "translations"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "bin": {
+    "argon-locales": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18",
+    "bun": ">=1",
+    "deno": ">=2"
+  },
+  "scripts": {
+    "build": "tsup",
+    "check": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@argon-sdk/core": "1.0.2",
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@fluent/bundle": "^0.19.1",
+    "@types/bun": "latest",
+    "cleye": "^2.6.0",
+    "tsup": "^8.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/argon-sdk/locales"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
