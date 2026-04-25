@@ -81,15 +81,7 @@ const greet = command(
 
 ### 5. Register the plugin
 
-To get `context.t` typed in handlers, add this augmentation once in your project (e.g. `types.d.ts`):
-
-```ts
-import type { FluentHelper } from '@argon-sdk/locales'
-
-declare module '@argon-sdk/core' {
-  interface BaseContext { readonly t: FluentHelper }
-}
-```
+`context.t` is typed automatically via the bot's accumulated decorators — no `types.d.ts` boilerplate, no `tsconfig.json` `include` tweaks.
 
 ```ts
 import { Bot, Intent } from '@argon-sdk/core'
