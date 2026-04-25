@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "license": "MIT",
   "exports": "./src/index.ts",
+  "imports": {
+    "@argon-sdk/core": "npm:@argon-sdk/core@^1.2.0"
+  },
   "publish": {
     "include": [
       "src/**/*.ts",
